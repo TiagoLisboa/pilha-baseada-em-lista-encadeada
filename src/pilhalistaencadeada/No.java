@@ -10,19 +10,19 @@ package pilhalistaencadeada;
  * @author tiago
  */
 public class No {
-    private int valor;
+    private Object valor;
     private No proxNo;
     
-    public No (int valor, No proxNo) {
+    public No (Object valor, No proxNo) {
         this.valor = valor;
         this.proxNo = proxNo;
     }
     
-    public void setValor (int valor){
+    public void setValor (Object valor){
         this.valor = valor;
     }
     
-    public int getValor () {
+    public Object getValor () {
         return this.valor;
     }
     

@@ -9,6 +9,6 @@ package pilhalistaencadeada;
  *
  * @author tiago
  */
-class PilhaVaziaException extends Exception {
+class EPilhaVazia extends Exception {
     
 }

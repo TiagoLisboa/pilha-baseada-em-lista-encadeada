@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        PilhaListaEncadeada p = new PilhaListaEncadeada ();
+        Pilha p = new PilhaListaEncadeada ();
         int op = -1;
         while(op!=0){
             Menu();
@@ -39,7 +39,7 @@ public class Main {
                     try {
                         Object x = p.pop();
                         System.out.println("Último inserido: "+ x);
-                    } catch (PilhaVaziaException e) {
+                    } catch (EPilhaVazia e) {
                         System.out.println("Pilha vazia");
                     }
                     break;
@@ -47,7 +47,7 @@ public class Main {
                     try {
                         Object x = p.top();
                         System.out.println("Topo da pilha: " + x);
-                    } catch (PilhaVaziaException e) {
+                    } catch (EPilhaVazia e) {
                         System.out.println("Pilha vazia");
                     }
                     break;

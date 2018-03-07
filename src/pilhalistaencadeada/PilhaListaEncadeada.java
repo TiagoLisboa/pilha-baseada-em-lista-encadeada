@@ -9,7 +9,7 @@ package pilhalistaencadeada;
  *
  * @author tiago
  */
-public class PilhaListaEncadeada {
+public class PilhaListaEncadeada implements Pilha{
     private No topo;
     private int tamanho;
     
@@ -21,26 +21,26 @@ public class PilhaListaEncadeada {
         return this.tamanho == 0;
     }
     
-    public No top() throws PilhaVaziaException {
+    public No top() throws EPilhaVazia {
         if (this.topo != null)
             return this.topo;
         else
-            throw new PilhaVaziaException();
+            throw new EPilhaVazia();
     }
     
-    public void push (int valor) {
+    public void push (Object valor) {
         No novoNo = new No(valor, this.topo);
         this.topo = novoNo;
         this.tamanho++;
     }
     
-    public No pop () throws PilhaVaziaException {
+    public No pop () throws EPilhaVazia {
         No antigoTopo = this.topo;
         if (antigoTopo != null) {
             this.topo = antigoTopo.getProxNo();
             this.tamanho--;
         } else {
-            throw new PilhaVaziaException();
+            throw new EPilhaVazia();
         }
         return antigoTopo;
     }
